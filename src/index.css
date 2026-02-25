@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-brown-600: #7c2d12;
+  --color-brown-700: #431407;
+  --color-pink-50: #fff1f2;
+  --color-pink-100: #ffe4e6;
+  --color-pink-200: #fecdd3;
+  --color-pink-500: #f43f5e;
+  --color-pink-600: #e11d48;
+}
+
+body {
+  background-color: #ffffff;
+  color: #4b5563;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.content-container {
+  @apply min-h-screen flex flex-col font-sans max-w-md mx-auto bg-white shadow-2xl relative overflow-hidden transition-all duration-500;
+}
+
+.content-container.theme-clouds {
+  background-image: linear-gradient(to bottom, #87ceeb, #ffffff);
+}
+
+.content-container.theme-starry {
+  background-image: linear-gradient(to bottom, #0c1445, #2b32b2);
+  color: #e0e7ff;
+}
+
+.content-container.theme-pink-forest {
+  background-image: linear-gradient(to bottom, #fce4ec, #f06292);
+}
+
+.content-container.theme-pastel {
+  background-image: linear-gradient(to bottom, #f3e5f5, #e1bee7);
+}
+
+.content-container.theme-sunset {
+  background-image: linear-gradient(to bottom, #ff9800, #ff5722);
+}
+
+.content-container.theme-ocean {
+  background-image: linear-gradient(to bottom, #00bcd4, #009688);
+}
+
+.content-container.theme-mountain {
+  background-image: linear-gradient(to bottom, #e8f5e9, #4caf50);
+}
+
+.content-container.theme-city {
+  background-image: linear-gradient(to bottom, #37474f, #263238);
+  color: #cfd8dc;
+}
+
+.content-container.theme-space {
+  background-image: radial-gradient(circle, #4a148c, #000000);
+  color: #e1bee7;
+}
+
+.content-container.theme-garden {
+  background-image: linear-gradient(to bottom, #f1f8e9, #8bc34a);
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+}
+
+.garden-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(22, 101, 52, 0.1);
+  border-radius: 1.5rem;
+}
+
+.strawberry-btn {
+  @apply flex items-center justify-center gap-2 px-6 py-3 rounded-full font-semibold transition-all active:scale-95;
+}
+
+.strawberry-btn-primary {
+  @apply bg-red-500 text-white shadow-lg hover:bg-red-600;
+}
+
+.strawberry-btn-secondary {
+  @apply bg-green-500 text-white shadow-lg hover:bg-green-600;
+}
+
+/* FullCalendar Customization */
+.fc {
+  --fc-border-color: #f0fdf4;
+  --fc-button-bg-color: #166534;
+  --fc-button-border-color: #166534;
+  --fc-button-hover-bg-color: #15803d;
+  --fc-button-active-bg-color: #14532d;
+  font-family: inherit;
+}
+
+.fc .fc-toolbar-title {
+  @apply text-sm font-bold text-green-800;
+}
+
+.fc .fc-button {
+  @apply px-2 py-1 text-xs rounded-lg;
+}
+
+.fc .fc-daygrid-day-number {
+  @apply text-[10px] text-green-600 p-1;
+}
+
+.fc .fc-event {
+  @apply bg-transparent border-none text-center text-lg cursor-pointer;
+}
+
+.fc .fc-day-today {
+  background-color: rgba(254, 242, 242, 0.5) !important;
+}
+
+.markdown-body {
+  @apply text-sm text-green-700 leading-relaxed;
+}
+
+.markdown-body p {
+  @apply mb-2;
+}
+
+.markdown-body ul {
+  @apply list-disc list-inside mb-2;
+}
+
+.markdown-body h1, .markdown-body h2, .markdown-body h3 {
+  @apply font-bold text-green-800 mt-2 mb-1;
+}
+

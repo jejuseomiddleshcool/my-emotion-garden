@@ -1,0 +1,7 @@
+{
+  "name": "My Emotion Garden",
+  "description": "A strawberry-themed emotion tracking and plant care app for middle school students to learn respect for life.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
